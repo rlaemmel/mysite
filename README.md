@@ -6,6 +6,8 @@ https://docs.djangoproject.com/en/1.3/intro/
 
 © 2005-2014 Django Software Foundation unless otherwise noted.
 
+In fact, a simple RESTful API was added.
+
 # Objective
 
 The content has been assembled by Ralf Lämmel, http://softlang.wikidot.com/
@@ -57,6 +59,8 @@ You can skip all "edit" and "create" steps for files and directories, if you jus
 * Add "mysite/templates/polls/detail.html".
 * Add "mysite/templates/polls/results.html".
 
+Steps for creating the RESTful API are left out here.
+
 ## Customize base-site template
 
 These steps are optional. (They show additional means of customization.)
@@ -64,3 +68,16 @@ These steps are optional. (They show additional means of customization.)
 * Create and run "mysite/find.py" to locate Django installation.
 * Copy Django's "contrib/admin/templates/admin/base_site.html" to the "templates/admin" dir.
 * Edit "templates/admin/base_site.html" to customize it for the Polls app.
+
+## The RESTful API
+
+Additional files:
+* mysite/polls/api.py
+* mysite/polls/middleware.py
+
+Affected files:
+* mysite/settings.py (to disable CSRF)
+* mysite/urls.py (to route URLs to API)
+
+Illustrative client:
+* https://github.com/rlaemmel/startup14/tree/master/rest_bot
