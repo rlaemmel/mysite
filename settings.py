@@ -108,6 +108,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    # Added according to http://www.soyoucode.com/2011/really-disable-csrf-django
+    'mysite.polls.middleware.DisableCSRF',
 )
 
 ROOT_URLCONF = 'mysite.urls'
